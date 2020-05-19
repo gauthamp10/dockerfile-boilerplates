@@ -1,2 +1,2 @@
 # dockerfile-boilerplates
-Tested and ready to use docker boilerplates for all languages.
+Tested and ready to use docker boilerplates for most common porgamming languages.
