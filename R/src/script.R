@@ -1,0 +1,1 @@
+cat("R running inside docker.\n")
