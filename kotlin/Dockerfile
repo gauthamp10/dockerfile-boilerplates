@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk update && \
+RUN apk add --update bash && \
     apk fetch openjdk8 && \
     apk add --no-cache openjdk8;
 
