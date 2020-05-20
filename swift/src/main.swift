@@ -1,0 +1,1 @@
+print("Swift running inside docker")
