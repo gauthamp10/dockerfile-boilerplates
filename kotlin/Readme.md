@@ -1,9 +1,9 @@
-# Java Boilerplate Docker
+# Kotlin Boilerplate Docker
 
-Build,compile and run Java via docker
+Build,compile and run Kotlin via docker
 
 ```
- docker build -t java-build .
+ docker build -t kotlin-build .
 
- docker run --rm java-build
+ docker run --rm kotlin-build
 ```
