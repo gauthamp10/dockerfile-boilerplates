@@ -3,7 +3,7 @@
 Build and run python web app via docker.
 
 ```
- docker build -t python-build .
+ docker build -t pythonweb-build .
 
- docker run -p 5000:5000 --rm -v /path/to/volume/:/app python-build
+ docker run -p 5000:5000 --rm -v /path/to/volume/:/app pythonweb-build
 ```
