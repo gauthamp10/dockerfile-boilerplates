@@ -1,29 +1,41 @@
 os: linux
+dist: focal
+language: bash
 
-
-matrix:
+jobs:
   include:
     - language: c
-      dist: focal
+      dist: alpine
       before_script:
         - cd c
       script:
         - docker build -t c-build .
+      install:
         - docker run --rm c-build
 
     - language: cpp
-      dist: focal
+      dist: alpine
       before_script:
         - cd cpp
       script:
         - docker build -t cpp-build .
+      install:
         - docker run --rm cpp-build
 
     - language: bash
+      dist: alpine
+      before_script:
+        - cd bash
+      script:
+        - docker build -t bash-build .
+      install:
+        - docker run --rm bash-build
+
+    - language: dart
       dist: focal
       before_script:
         - cd bash
       script:
         - docker build -t bash-build .
+      install:
         - docker run --rm bash-build
-
