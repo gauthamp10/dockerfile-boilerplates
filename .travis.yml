@@ -14,3 +14,10 @@ install:
    
 script:
      - docker run --rm c-build
+
+install:
+     - cd cpp
+     - docker build -t cpp-build .
+
+script:
+     - docker run --rm cpp-build
