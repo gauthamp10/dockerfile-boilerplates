@@ -1,2 +1,7 @@
 services:
     - docker
+    install:
+        - docker build -t bash-build .
+        - docker run --rm bash-build
+        script:
+            - docker ps | grep -q blog
