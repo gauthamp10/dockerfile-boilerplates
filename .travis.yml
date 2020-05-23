@@ -9,7 +9,9 @@ services:
      - docker
     
 install:
+     - cd c
      - docker build -t c-build .
    
 script:
+     - cd c
      - docker run --rm c-build
