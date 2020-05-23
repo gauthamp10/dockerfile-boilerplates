@@ -1,0 +1,15 @@
+os: linux
+
+dist: focal
+
+
+language: cpp
+
+services:
+     - docker
+    
+install:
+     - docker build -t cpp-build .
+   
+script:
+     - docker run --rm cpp-build

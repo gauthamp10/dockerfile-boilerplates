@@ -1,2 +1,15 @@
-language:
-    - c
+os: linux
+
+dist: focal
+
+
+language: c
+
+services:
+     - docker
+    
+install:
+     - docker build -t c-build .
+   
+script:
+     - docker run --rm c-build

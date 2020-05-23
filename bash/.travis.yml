@@ -1,11 +1,15 @@
-sudo: 'required'
+os: linux
+
+dist: focal
+
 
 language: bash
 
 services:
-    - docker
-    install:
-        - docker build -t bash-build .
-        - docker run --rm bash-build
-        script:
-            - docker ps | grep -q bash-build
+     - docker
+    
+install:
+     - docker build -t bash-build .
+   
+script:
+     - docker run --rm bash-build
