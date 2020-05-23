@@ -5,7 +5,7 @@ language: bash
 jobs:
   include:
     - language: c
-      dist: alpine
+      dist: focal
       before_script:
         - cd c
       script:
@@ -14,7 +14,7 @@ jobs:
         - docker run --rm c-build
 
     - language: cpp
-      dist: alpine
+      dist: focal
       before_script:
         - cd cpp
       script:
@@ -23,7 +23,7 @@ jobs:
         - docker run --rm cpp-build
 
     - language: bash
-      dist: alpine
+      dist: focal
       before_script:
         - cd bash
       script:
