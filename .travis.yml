@@ -2,7 +2,7 @@ os: linux
 dist: focal
 language: bash
 
-jobs:
+matrix:
   include:
     - language: c
       dist: focal
@@ -36,6 +36,6 @@ jobs:
       before_script:
         - cd dart
       script:
-        - docker build -t bash-build .
+        - docker build -t dart-build .
       install:
-        - docker run --rm bash-build
+        - docker run --rm dart-build
