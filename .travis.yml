@@ -1,6 +1,5 @@
 os: linux
-dist: focal
-language: bash
+
 
 matrix:
   include:
@@ -10,7 +9,6 @@ matrix:
         - cd c
       script:
         - docker build -t c-build .
-      install:
         - docker run --rm c-build
 
     - language: cpp
@@ -19,7 +17,6 @@ matrix:
         - cd cpp
       script:
         - docker build -t cpp-build .
-      install:
         - docker run --rm cpp-build
 
     - language: shell
@@ -28,7 +25,6 @@ matrix:
         - cd bash
       script:
         - docker build -t bash-build .
-      install:
         - docker run --rm bash-build
 
     - language: dart
@@ -37,5 +33,4 @@ matrix:
         - cd dart
       script:
         - docker build -t dart-build .
-      install:
         - docker run --rm dart-build
