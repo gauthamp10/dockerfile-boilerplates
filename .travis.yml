@@ -1,20 +1,19 @@
 os: linux
+matrix:
+     include:
 
-dist: focal
-
-services:
-     - docker
-    
-install:
-     - cd c
-     - docker build -t c-build .
+       - language: c
+         dist: focal
+         before_script:
+           - cd c
+         script:
+           - docker build -t c-build .
+           - docker run --rm c-build
    
-script:
-     - docker run --rm c-build
-
-install:
-     - cd cpp
-     - docker build -t cpp-build .
-
-script:
-     - docker run --rm cpp-build
+       - language: cpp
+         dist: focal
+         before_script:
+          - cd cpp
+          script:
+               - docker build -t cpp-build .
+               - docker run --rm cpp-build
