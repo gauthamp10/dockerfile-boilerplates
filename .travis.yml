@@ -22,7 +22,7 @@ jobs:
       install:
         - docker run --rm cpp-build
 
-    - language: bash
+    - language: shell
       dist: focal
       before_script:
         - cd bash
@@ -34,7 +34,7 @@ jobs:
     - language: dart
       dist: focal
       before_script:
-        - cd bash
+        - cd dart
       script:
         - docker build -t bash-build .
       install:
