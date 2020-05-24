@@ -1,10 +1,16 @@
-
+# Removed PHP and JS bcoz of zero test case.
 os: linux
 services: docker
 language: shell
 
 jobs:
   include:
+    - before_script:
+        - cd ada
+      script:
+        - docker build -t ada-build .
+        - docker run --rm ada-build
+
     - before_script:
         - cd bash
       script:
@@ -16,6 +22,12 @@ jobs:
       script:
         - docker build -t c-build .
         - docker run --rm c-build
+
+    - before_script:
+        - cd common-lisp
+      script:
+        - docker build -t clisp-build .
+        - docker run --rm clisp-build        
 
     - before_script:
         - cd cpp
@@ -42,6 +54,12 @@ jobs:
         - docker run --rm erlang-build
 
     - before_script:
+        - cd fortran
+      script:
+        - docker build -t fortran-build .
+        - docker run --rm fortran-build
+
+    - before_script:
         - cd go
       script:
         - docker build -t go-build .
@@ -54,17 +72,16 @@ jobs:
         - docker run --rm haskell-build
 
     - before_script:
+        - cd icon
+      script:
+        - docker build -t icon-build .
+        - docker run --rm icon-build
+
+    - before_script:
         - cd java
       script:
         - docker build -t java-build .
         - docker run --rm java-build
-
-    - before_script:
-        - cd javascript
-      script:
-        - docker build -t javascript-build .
-        - docker run --rm javascript-build
-
 
     - before_script:
         - cd julia
@@ -72,6 +89,23 @@ jobs:
         - docker build -t julia-build .
         - docker run --rm julia-build
 
+    - before_script:
+        - cd kotlin
+      script:
+        - docker build -t kotlin-build .
+        - docker run --rm kotlin-build
+
+    - before_script:
+        - cd lisp
+      script:
+        - docker build -t lisp-build .
+        - docker run --rm lisp-build
+
+    - before_script:
+        - cd lua
+      script:
+        - docker build -t lua-build .
+        - docker run --rm lua-build
 
     - before_script:
         - cd node
@@ -102,7 +136,6 @@ jobs:
       script:
         - docker build -t python-build .
         - docker run --rm python-build
-
 
     - before_script:
        - cd python/web
