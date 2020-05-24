@@ -1,5 +1,8 @@
-FROM alpine:latest
-RUN  apk add --no-cache elixir &&  mkdir /src
+FROM elixir:1.10.3-alpine
+
+RUN  mkdir /src;
+
 COPY src/main.exs /src
 WORKDIR /src
-CMD ["elixir","./main.exs"]
+ENTRYPOINT [ "elixir" ]
+CMD ["./main.exs"]

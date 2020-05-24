@@ -1,159 +1,134 @@
+
 os: linux
-dist: focal
+services: docker
 language: shell
 
 jobs:
   include:
-    - language: shell
-      before_script:
+    - before_script:
         - cd bash
       script:
         - docker build -t bash-build .
         - docker run --rm bash-build
 
-    - language: c
-      before_script:
+    - before_script:
         - cd c
       script:
         - docker build -t c-build .
         - docker run --rm c-build
 
-    - language: cpp
-      before_script:
+    - before_script:
         - cd cpp
       script:
         - docker build -t cpp-build .
         - docker run --rm cpp-build
 
-    - language: dart
-      before_script:
+    - before_script:
         - cd dart
       script:
         - docker build -t dart-build .
         - docker run --rm dart-build
 
-    - language: elixir
-      before_script:
+    - before_script:
         - cd elixir
       script:
         - docker build -t elixir-build .
         - docker run --rm elixir-build
 
-    - language: erlang
-      before_script:
+    - before_script:
         - cd erlang
       script:
         - docker build -t erlang-build .
         - docker run --rm erlang-build
 
-    - language: go
-      before_script:
+    - before_script:
         - cd go
       script:
         - docker build -t go-build .
         - docker run --rm go-build
 
-    - language: haskell
-      before_script:
+    - before_script:
         - cd haskell
       script:
         - docker build -t haskell-build .
         - docker run --rm haskell-build
 
-    - language: java
-      before_script:
+    - before_script:
         - cd java
       script:
         - docker build -t java-build .
         - docker run --rm java-build
 
-    - language: javascript
-      before_script:
+    - before_script:
         - cd javascript
       script:
         - docker build -t javascript-build .
         - docker run --rm javascript-build
 
-    - language: julia
-      before_script:
+
+    - before_script:
         - cd julia
       script:
         - docker build -t julia-build .
         - docker run --rm julia-build
 
-    - language: javascript
-      before_script:
+
+    - before_script:
         - cd node
       script:
         - docker build -t node-build .
         - docker run --rm node-build
 
-    - language: objective-c
-      before_script:
+    - before_script:
         - cd objective-c
       script:
         - docker build -t objc-build .
         - docker run --rm objc-build
 
-    - language: perl
-      before_script:
+    - before_script:
         - cd perl
       script:
         - docker build -t perl-build .
         - docker run --rm perl-build
 
-    - language: php
-      before_script:
+    - before_script:
         - cd php
       script:
         - docker build -t php-build .
         - docker run --rm php-build
 
-    - language: python
-      before_script:
+    - before_script:
         - cd python/worker
       script:
         - docker build -t python-build .
         - docker run --rm python-build
 
-    - language: python
-      before_script:
-        - cd python/web
-      script:
-        - docker build -t pythonweb-build .
-        - docker run --rm pythonweb-build
 
-    - language: r
-      before_script:
+    - before_script:
+       - cd python/web
+      script:
+       - docker build -t pythonweb-build .
+       - docker run --rm pythonweb-build
+
+    - before_script:
         - cd r
       script:
         - docker build -t r-build .
         - docker run --rm r-build
 
-
-    - language: ruby
-      before_script:
-        - cd ruby
-      script:
-        - docker build -t ruby-build .
-        - docker run --rm ruby-build
-    
-    - language: rust
-      before_script:
+    - before_script:
         - cd rust
       script:
         - docker build -t rust-build .
         - docker run --rm rust-build
 
-    - language: scala
-      before_script:
+    - before_script:
         - cd scala
       script:
         - docker build -t scala-build .
         - docker run --rm scala-build
 
-    - language: swift
-      before_script:
+    - before_script:
         - cd swift
       script:
         - docker build -t swift-build .
