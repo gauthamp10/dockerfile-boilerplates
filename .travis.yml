@@ -84,6 +84,12 @@ jobs:
         - docker run --rm java-build
 
     - before_script:
+        - cd javascript
+      script:
+        - docker build -t javascript-build .
+        - docker run --rm javascript-build
+
+    - before_script:
         - cd julia
       script:
         - docker build -t julia-build .
