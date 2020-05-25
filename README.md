@@ -2,7 +2,6 @@
 Tested and ready to use docker boilerplates for most common progamming languages.
 
 
-
 | Image Name  | PL Version  | Base Image |  Image Size    |
 | :---        |    :----:   |  :----:    |           ---: |
 |   ada-build   |   10.1.0-1  |   ubuntu:latest   |   292MB   |
