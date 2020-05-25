@@ -1,8 +1,8 @@
-#import <Foundation/Foundation.h>
+#import <objc/Object.h>
+#import <stdio.h>
 
-int main(void)
+int main()
 {
-    printf("\n\n**********************************************\n\n");
-    printf("\n\n\tObjective-c running inside docker.\n\n");
-    printf("\n\n**********************************************\n\n");
+  printf("Objective C running inside docker.\n");
+  return 0;
 }
