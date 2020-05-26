@@ -3,7 +3,7 @@
 Build and run Common-lisp scripts via docker.
 
 ```
- docker build -t clisp-build .
+ docker build -t clsip .
 
- docker run --rm clisp-build
+ docker run --rm clsip
 ```

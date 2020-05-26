@@ -3,8 +3,8 @@
 Build and run Bash scripts via docker.
 
 ```
- docker build -t bash-build .
+ docker build -t bash .
 
- docker run --rm bash-build
+ docker run --rm bash
 ```
 ## Build size: 5.61MB

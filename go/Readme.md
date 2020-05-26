@@ -3,7 +3,7 @@
 Build and run Go scripts via docker.
 
 ```
- docker build -t go-build .
+ docker build -t go .
 
- docker run --rm go-build
+ docker run --rm go
 ```

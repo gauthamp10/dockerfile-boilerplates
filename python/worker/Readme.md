@@ -3,7 +3,7 @@
 Build and run Python worker script via docker.
 
 ```
- docker build -t python-build .
+ docker build -t python .
 
- docker run --rm python-build
+ docker run --rm python
 ```

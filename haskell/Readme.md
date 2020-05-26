@@ -3,7 +3,7 @@
 Build and run Haskell via docker.
 
 ```
- docker build -t haskell-build .
+ docker build -t haskell .
 
- docker run --rm haskell-build
+ docker run --rm haskell
 ```

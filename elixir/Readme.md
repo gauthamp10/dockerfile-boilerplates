@@ -3,7 +3,7 @@
 Build and run Elixir scripts via docker.
 
 ```
- docker build -t elixir-build .
+ docker build -t elixir .
 
- docker run --rm elixir-build
+ docker run --rm elixir
 ```

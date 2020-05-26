@@ -3,7 +3,7 @@
 Build and run Node via docker.
 
 ```
- docker build -t node-build .
+ docker build -t node .
 
- docker run --rm node-build
+ docker run --rm node
 ```

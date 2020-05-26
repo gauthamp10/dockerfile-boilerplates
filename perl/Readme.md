@@ -3,7 +3,7 @@
 Build,compile and run perl code via docker.
 
 ```
- docker build -t perl-build .
+ docker build -t perl .
 
- docker run --rm perl-build
+ docker run --rm perl
 ```

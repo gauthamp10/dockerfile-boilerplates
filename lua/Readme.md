@@ -3,7 +3,7 @@
 Build and run Lua scripts via docker.
 
 ```
- docker build -t lua-build .
+ docker build -t lua .
 
- docker run --rm lua-build
+ docker run --rm lua
 ```

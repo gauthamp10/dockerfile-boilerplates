@@ -3,7 +3,7 @@
 Build,compile and run Icon code via docker.
 
 ```
- docker build -t icon-build .
+ docker build -t icon .
 
- docker run --rm icon-build
+ docker run --rm icon
 ```

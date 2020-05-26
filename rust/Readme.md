@@ -3,7 +3,7 @@
 Build,compile and run Rust code via docker.
 
 ```
- docker build -t rust-build .
+ docker build -t rust .
 
- docker run --rm rust-build
+ docker run --rm rust
 ```

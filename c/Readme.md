@@ -3,7 +3,7 @@
 Build,compile and run C code via docker.
 
 ```
- docker build -t c-build .
+ docker build -t c .
 
- docker run --rm c-build
+ docker run --rm c
 ```

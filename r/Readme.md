@@ -3,7 +3,7 @@
 Build and run R scripts via docker.
 
 ```
- docker build -t r-build .
+ docker build -t r .
 
- docker run --rm r-build
+ docker run --rm r
 ```

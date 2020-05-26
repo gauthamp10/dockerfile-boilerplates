@@ -1,5 +1,13 @@
-ARG DEBIAN_FRONTEND=noninteractive
 FROM ubuntu:latest
+ARG DEBIAN_FRONTEND=noninteractive
+ARG VCS_REF
+ARG BUILD_DATE
+
+LABEL maintainer="Gautham Prakash <github.com/gauthamp10>"
+LABEL org.label-schema.build-date=$BUILD_DATE
+LABEL org.label-schema.vcs-url="https://github.com/gauthamp10/dockerfile-boilerplates"
+LABEL org.label-schema.vcs-ref=$VCS_REF
+
 RUN  apt-get update &&  \
      export DEBIAN_FRONTEND=noninteractive && \
      ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime && \

@@ -3,7 +3,7 @@
 Build,compile and run Ada code via docker.
 
 ```
- docker build -t ada-build .
+ docker build -t ada .
 
- docker run --rm ada-build
+ docker run --rm ada
 ```

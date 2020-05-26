@@ -3,9 +3,9 @@
 Build,compile and run Scala via docker
 
 ```
- docker build -t scala-build .
+ docker build -t scala .
 
- docker run --rm scala-build
+ docker run --rm scala
 ```
 *Note: Scala build takes quite some time because scala by default requires java*
 

@@ -8,167 +8,336 @@ jobs:
     - before_script:
         - cd ada
       script:
-        - docker build -t ada-build .
-        - docker run --rm ada-build
+        - docker build -t ada --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm ada
+        after_script:
+          - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+          - docker tag ada $DOCKER_USERNAME/ada:$TRAVIS_BUILD_NUMBER
+          - docker push $DOCKER_USERNAME/ada:$TRAVIS_BUILD_NUMBER
+          - docker tag ada $DOCKER_USERNAME/ada:latest
+          - docker push $DOCKER_USERNAME/ada:latest
 
     - before_script:
         - cd bash
       script:
-        - docker build -t bash-build .
-        - docker run --rm bash-build
+        - docker build -t bash --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm bash
+      after_script:
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        - docker tag bash $DOCKER_USERNAME/bash:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/bash:$TRAVIS_BUILD_NUMBER
+        - docker tag bash $DOCKER_USERNAME/bash:latest
+        - docker push $DOCKER_USERNAME/bash:latest
 
     - before_script:
         - cd c
       script:
-        - docker build -t c-build .
-        - docker run --rm c-build
-
+        - docker build -t c --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm c
+      after_script:
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        - docker tag c $DOCKER_USERNAME/c:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/c:$TRAVIS_BUILD_NUMBER
+        - docker tag c $DOCKER_USERNAME/c:latest
+        - docker push $DOCKER_USERNAME/c:latest
+        
     - before_script:
         - cd common-lisp
       script:
-        - docker build -t clisp-build .
-        - docker run --rm clisp-build        
-
+        - docker build -t clisp --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm clisp        
+      after_script:
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        - docker tag clisp $DOCKER_USERNAME/clisp:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/clisp:$TRAVIS_BUILD_NUMBER
+        - docker tag clisp $DOCKER_USERNAME/clisp:latest
+        - docker push $DOCKER_USERNAME/clisp:latest
+        
     - before_script:
         - cd cpp
       script:
-        - docker build -t cpp-build .
-        - docker run --rm cpp-build
+        - docker build -t cpp --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm cpp
+      after_script:
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        - docker tag cpp $DOCKER_USERNAME/cpp:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/cpp:$TRAVIS_BUILD_NUMBER
+        - docker tag cpp $DOCKER_USERNAME/cpp:latest
+        - docker push $DOCKER_USERNAME/cpp:latest
 
     - before_script:
         - cd dart
       script:
-        - docker build -t dart-build .
-        - docker run --rm dart-build
+        - docker build -t dart --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm dart
+      after_script:
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        - docker tag dart $DOCKER_USERNAME/dart:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/dart:$TRAVIS_BUILD_NUMBER
+        - docker tag dart $DOCKER_USERNAME/dart:latest
+        - docker push $DOCKER_USERNAME/dart:latest
 
     - before_script:
         - cd elixir
       script:
-        - docker build -t elixir-build .
-        - docker run --rm elixir-build
+        - docker build -t elixir --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm elixir
+      after_script:
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        - docker tag elixir $DOCKER_USERNAME/elixir:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/elixir:$TRAVIS_BUILD_NUMBER
+        - docker tag elixir $DOCKER_USERNAME/elixir:latest
+        - docker push $DOCKER_USERNAME/elixir:latest  
 
     - before_script:
         - cd erlang
       script:
-        - docker build -t erlang-build .
-        - docker run --rm erlang-build
+        - docker build -t erlang --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm erlang
+      after_script:
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        - docker tag erlang $DOCKER_USERNAME/erlang:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/erlang:$TRAVIS_BUILD_NUMBER
+        - docker tag erlang $DOCKER_USERNAME/erlang:latest
+        - docker push $DOCKER_USERNAME/erlang:latest
 
     - before_script:
         - cd fortran
       script:
-        - docker build -t fortran-build .
-        - docker run --rm fortran-build
+        - docker build -t fortran --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm fortran
+      after_script:
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        - docker tag fortran $DOCKER_USERNAME/fortran:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/fortran:$TRAVIS_BUILD_NUMBER
+        - docker tag fortran $DOCKER_USERNAME/fortran:latest
+        - docker push $DOCKER_USERNAME/fortran:latest       
 
     - before_script:
         - cd go
       script:
-        - docker build -t go-build .
-        - docker run --rm go-build
+        - docker build -t go --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm go
+      after_script:
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        - docker tag go $DOCKER_USERNAME/go:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/go:$TRAVIS_BUILD_NUMBER
+        - docker tag go $DOCKER_USERNAME/go:latest
+        - docker push $DOCKER_USERNAME/go:latest        
 
     - before_script:
         - cd haskell
       script:
-        - docker build -t haskell-build .
-        - docker run --rm haskell-build
+        - docker build -t haskell --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm haskell
+      after_script:
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        - docker tag haskell $DOCKER_USERNAME/haskell:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/haskell:$TRAVIS_BUILD_NUMBER
+        - docker tag haskell $DOCKER_USERNAME/haskell:latest
+        - docker push $DOCKER_USERNAME/haskell:latest
 
     - before_script:
         - cd icon
       script:
-        - docker build -t icon-build .
-        - docker run --rm icon-build
+        - docker build -t icon --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm icon
+      after_script:
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        - docker tag icon $DOCKER_USERNAME/icon:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/icon:$TRAVIS_BUILD_NUMBER
+        - docker tag icon $DOCKER_USERNAME/icon:latest
+        - docker push $DOCKER_USERNAME/icon:latest
 
     - before_script:
         - cd java
       script:
-        - docker build -t java-build .
-        - docker run --rm java-build
+        - docker build -t java --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm java
+      after_script:
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        - docker tag java $DOCKER_USERNAME/java:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/java:$TRAVIS_BUILD_NUMBER
+        - docker tag java $DOCKER_USERNAME/java:latest
+        - docker push $DOCKER_USERNAME/java:latest
 
     - before_script:
         - cd javascript
       script:
-        - docker build -t javascript-build .
-        - docker run --rm javascript-build
+        - docker build -t javascript --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm javascript
+      after_script:
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        - docker tag javascript $DOCKER_USERNAME/javascript:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/javascript:$TRAVIS_BUILD_NUMBER
+        - docker tag javascript $DOCKER_USERNAME/javascript:latest
+        - docker push $DOCKER_USERNAME/javascript:latest
 
     - before_script:
         - cd julia
       script:
-        - docker build -t julia-build .
-        - docker run --rm julia-build
+        - docker build -t julia --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm julia
+      after_script:
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        - docker tag julia $DOCKER_USERNAME/julia:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/julia:$TRAVIS_BUILD_NUMBER
+        - docker tag julia $DOCKER_USERNAME/julia:latest
+        - docker push $DOCKER_USERNAME/julia:latest
 
     - before_script:
         - cd kotlin
       script:
-        - docker build -t kotlin-build .
-        - docker run --rm kotlin-build
+        - docker build -t kotlin --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm kotlin
+      after_script:
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        - docker tag kotlin $DOCKER_USERNAME/kotlin:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/kotlin:$TRAVIS_BUILD_NUMBER
+        - docker tag kotlin $DOCKER_USERNAME/kotlin:latest
+        - docker push $DOCKER_USERNAME/kotlin:latest
 
     - before_script:
         - cd lisp
       script:
-        - docker build -t lisp-build .
-        - docker run --rm lisp-build
+        - docker build -t lisp --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm lisp
+      after_script:
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        - docker tag lisp $DOCKER_USERNAME/lisp:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/lisp:$TRAVIS_BUILD_NUMBER
+        - docker tag lisp $DOCKER_USERNAME/lisp:latest
+        - docker push $DOCKER_USERNAME/lisp:latest
 
     - before_script:
         - cd lua
       script:
-        - docker build -t lua-build .
-        - docker run --rm lua-build
+        - docker build -t lua --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm lua
+      after_script:
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        - docker tag lua $DOCKER_USERNAME/lua:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/lua:$TRAVIS_BUILD_NUMBER
+        - docker tag lua $DOCKER_USERNAME/lua:latest
+        - docker push $DOCKER_USERNAME/lua:latest
 
     - before_script:
         - cd node
       script:
-        - docker build -t node-build .
-        - docker run --rm node-build
+        - docker build -t node --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm node
+     after_script:
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        - docker tag node $DOCKER_USERNAME/node:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/node:$TRAVIS_BUILD_NUMBER
+        - docker tag node $DOCKER_USERNAME/node:latest
+        - docker push $DOCKER_USERNAME/node:latest
 
     - before_script:
         - cd objective-c
       script:
-        - docker build -t objc-build .
-        - docker run --rm objc-build
+        - docker build -t objc --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm objc
+      after_script:
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        - docker tag objc $DOCKER_USERNAME/objc:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/objc:$TRAVIS_BUILD_NUMBER
+        - docker tag objc $DOCKER_USERNAME/objc:latest
+        - docker push $DOCKER_USERNAME/objc:latest
 
     - before_script:
         - cd perl
       script:
-        - docker build -t perl-build .
-        - docker run --rm perl-build
+        - docker build -t perl --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm perl
+      after_script:
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        - docker tag perl $DOCKER_USERNAME/perl:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/perl:$TRAVIS_BUILD_NUMBER
+        - docker tag perl $DOCKER_USERNAME/perl:latest
+        - docker push $DOCKER_USERNAME/perl:latest
 
     - before_script:
         - cd php
       script:
-        - docker build -t php-build .
-        - docker run --rm php-build
+        - docker build -t php --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm php
+      after_script:
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        - docker tag php $DOCKER_USERNAME/php:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/php:$TRAVIS_BUILD_NUMBER
+        - docker tag php $DOCKER_USERNAME/php:latest
+        - docker push $DOCKER_USERNAME/php:latest
 
     - before_script:
         - cd python/worker
       script:
-        - docker build -t python-build .
-        - docker run --rm python-build
+        - docker build -t python --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm python
+      after_script:
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        - docker tag python $DOCKER_USERNAME/python:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/python:$TRAVIS_BUILD_NUMBER
+        - docker tag python $DOCKER_USERNAME/python:latest
+        - docker push $DOCKER_USERNAME/python:latest
 
     - before_script:
        - cd python/web
       script:
-       - docker build -t pythonweb-build .
-       - docker run --rm pythonweb-build
+       - docker build -t pythonweb --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+       - docker run --rm pythonweb
+      after_script:
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        - docker tag pythonweb $DOCKER_USERNAME/pythonweb:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/pythonweb:$TRAVIS_BUILD_NUMBER
+        - docker tag pythonweb $DOCKER_USERNAME/pythonweb:latest
+        - docker push $DOCKER_USERNAME/pythonweb:latest
+       
 
     - before_script:
         - cd r
       script:
-        - docker build -t r-build .
-        - docker run --rm r-build
+        - docker build -t r --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm r
+      after_script:
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        - docker tag r $DOCKER_USERNAME/r:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/r:$TRAVIS_BUILD_NUMBER
+        - docker tag r $DOCKER_USERNAME/r:latest
+        - docker push $DOCKER_USERNAME/r:latest
 
     - before_script:
         - cd rust
       script:
-        - docker build -t rust-build .
-        - docker run --rm rust-build
+        - docker build -t rust --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm rust
+      after_script:
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        - docker tag rust $DOCKER_USERNAME/rust:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/rust:$TRAVIS_BUILD_NUMBER
+        - docker tag rust $DOCKER_USERNAME/rust:latest
+        - docker push $DOCKER_USERNAME/rust:latest
 
     - before_script:
         - cd scala
       script:
-        - docker build -t scala-build .
-        - docker run --rm scala-build
+        - docker build -t scala --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm scala
+      after_script:
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        - docker tag scala $DOCKER_USERNAME/scala:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/scala:$TRAVIS_BUILD_NUMBER
+        - docker tag scala $DOCKER_USERNAME/scala:latest
+        - docker push $DOCKER_USERNAME/scala:latest    
 
     - before_script:
         - cd swift
       script:
-        - docker build -t swift-build .
-        - docker run --rm swift-build
+        - docker build -t swift --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm swift
+      after_script:
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        - docker tag swift $DOCKER_USERNAME/swift:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/swift:$TRAVIS_BUILD_NUMBER
+        - docker tag swift $DOCKER_USERNAME/swift:latest
+        - docker push $DOCKER_USERNAME/swift:latest
