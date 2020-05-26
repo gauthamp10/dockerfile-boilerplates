@@ -10,12 +10,12 @@ jobs:
       script:
         - docker build -t ada --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
         - docker run --rm ada
-        after_script:
-          - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-          - docker tag ada $DOCKER_USERNAME/ada:$TRAVIS_BUILD_NUMBER
-          - docker push $DOCKER_USERNAME/ada:$TRAVIS_BUILD_NUMBER
-          - docker tag ada $DOCKER_USERNAME/ada:latest
-          - docker push $DOCKER_USERNAME/ada:latest
+      after_script:
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        - docker tag ada $DOCKER_USERNAME/ada:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/ada:$TRAVIS_BUILD_NUMBER
+        - docker tag ada $DOCKER_USERNAME/ada:latest
+        - docker push $DOCKER_USERNAME/ada:latest
 
     - before_script:
         - cd bash
@@ -226,7 +226,7 @@ jobs:
       script:
         - docker build -t node --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
         - docker run --rm node
-     after_script:
+      after_script:
         - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
         - docker tag node $DOCKER_USERNAME/node:$TRAVIS_BUILD_NUMBER
         - docker push $DOCKER_USERNAME/node:$TRAVIS_BUILD_NUMBER
