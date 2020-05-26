@@ -32,14 +32,14 @@ jobs:
     - before_script:
         - cd c
       script:
-        - docker build -t c --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
-        - docker run --rm c
+        - docker build -t c-build --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm c-buid
       after_script:
         - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-        - docker tag c $DOCKER_USERNAME/c:$TRAVIS_BUILD_NUMBER
-        - docker push $DOCKER_USERNAME/c:$TRAVIS_BUILD_NUMBER
-        - docker tag c $DOCKER_USERNAME/c:latest
-        - docker push $DOCKER_USERNAME/c:latest
+        - docker tag c-build $DOCKER_USERNAME/c-build:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/c-build:$TRAVIS_BUILD_NUMBER
+        - docker tag c-build $DOCKER_USERNAME/c-build:latest
+        - docker push $DOCKER_USERNAME/c-build:latest
         
     - before_script:
         - cd common-lisp
@@ -116,14 +116,14 @@ jobs:
     - before_script:
         - cd go
       script:
-        - docker build -t go --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
-        - docker run --rm go
+        - docker build -t go-buid --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm go-buid
       after_script:
         - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-        - docker tag go $DOCKER_USERNAME/go:$TRAVIS_BUILD_NUMBER
-        - docker push $DOCKER_USERNAME/go:$TRAVIS_BUILD_NUMBER
-        - docker tag go $DOCKER_USERNAME/go:latest
-        - docker push $DOCKER_USERNAME/go:latest        
+        - docker tag go-buid $DOCKER_USERNAME/go-buid:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/go-buid:$TRAVIS_BUILD_NUMBER
+        - docker tag go-buid $DOCKER_USERNAME/go-buid:latest
+        - docker push $DOCKER_USERNAME/go-buid:latest        
 
     - before_script:
         - cd haskell
@@ -297,14 +297,14 @@ jobs:
     - before_script:
         - cd r
       script:
-        - docker build -t r --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
-        - docker run --rm r
+        - docker build -t r-buid --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm r-buid
       after_script:
         - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-        - docker tag r $DOCKER_USERNAME/r:$TRAVIS_BUILD_NUMBER
-        - docker push $DOCKER_USERNAME/r:$TRAVIS_BUILD_NUMBER
-        - docker tag r $DOCKER_USERNAME/r:latest
-        - docker push $DOCKER_USERNAME/r:latest
+        - docker tag r-buid $DOCKER_USERNAME/r-buid:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/r-buid:$TRAVIS_BUILD_NUMBER
+        - docker tag r-buid $DOCKER_USERNAME/r-buid:latest
+        - docker push $DOCKER_USERNAME/r-buid:latest
 
     - before_script:
         - cd rust
