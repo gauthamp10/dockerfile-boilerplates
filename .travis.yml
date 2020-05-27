@@ -1,4 +1,3 @@
-# Removed PHP and JS bcoz of zero test case.
 os: linux
 services: docker
 language: shell
