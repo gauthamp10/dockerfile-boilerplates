@@ -155,4 +155,4 @@ Contributions are always welcomed. Create a boilerplate / template for any other
 
 ## __License__  
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
