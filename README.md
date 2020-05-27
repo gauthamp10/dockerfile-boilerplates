@@ -158,6 +158,7 @@ Website: [gauthamp10.github.io](https://gauthamp10.github.io)
 
 Blog: [gauthamp10/blog](https://gauthamp10.github.io/blog)
 
+<<<<<<< HEAD
 ## **License**
 
 <<<<<<< HEAD
@@ -168,3 +169,6 @@ lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ip
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 > > > > > > > fd0cc5b39c06d163f52e482c657e9e70d90042bd
+=======
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+>>>>>>> parent of deb05c8... typo [skip ci]
