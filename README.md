@@ -8,8 +8,6 @@
 
 Tested and ready to use docker boilerplates / templates for most common progamming languages. Like a *Hello World! of docker images.*
 
-
-
 ---
 
 ## __List Of Programming Languages__
