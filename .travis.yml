@@ -115,14 +115,14 @@ jobs:
     - before_script:
         - cd go
       script:
-        - docker build -t go-buid --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
-        - docker run --rm go-buid
+        - docker build -t go-build --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm go-build
       after_script:
         - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-        - docker tag go-buid $DOCKER_USERNAME/go-buid:$TRAVIS_BUILD_NUMBER
-        - docker push $DOCKER_USERNAME/go-buid:$TRAVIS_BUILD_NUMBER
-        - docker tag go-buid $DOCKER_USERNAME/go-buid:latest
-        - docker push $DOCKER_USERNAME/go-buid:latest        
+        - docker tag go-build $DOCKER_USERNAME/go-build:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/go-build:$TRAVIS_BUILD_NUMBER
+        - docker tag go-build $DOCKER_USERNAME/go-build:latest
+        - docker push $DOCKER_USERNAME/go-build:latest        
 
     - before_script:
         - cd haskell
@@ -296,14 +296,14 @@ jobs:
     - before_script:
         - cd r
       script:
-        - docker build -t r-buid --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
-        - docker run --rm r-buid
+        - docker build -t r-build --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
+        - docker run --rm r-build
       after_script:
         - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-        - docker tag r-buid $DOCKER_USERNAME/r-buid:$TRAVIS_BUILD_NUMBER
-        - docker push $DOCKER_USERNAME/r-buid:$TRAVIS_BUILD_NUMBER
-        - docker tag r-buid $DOCKER_USERNAME/r-buid:latest
-        - docker push $DOCKER_USERNAME/r-buid:latest
+        - docker tag r-build $DOCKER_USERNAME/r-build:$TRAVIS_BUILD_NUMBER
+        - docker push $DOCKER_USERNAME/r-build:$TRAVIS_BUILD_NUMBER
+        - docker tag r-build $DOCKER_USERNAME/r-build:latest
+        - docker push $DOCKER_USERNAME/r-build:latest
 
     - before_script:
         - cd rust

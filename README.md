@@ -1,25 +1,29 @@
-# dockerfile-boilerplates
-
-[![Build Status](https://travis-ci.com/gauthamp10/dockerfile-boilerplates.svg?token=GyGbkGV9nLfsTamsNpS4&branch=master)](https://travis-ci.com/gauthamp10/dockerfile-boilerplates)
-
-Tested and ready to use docker boilerplates / templates for most common progamming languages. Like a *Hello World! of docker images.*
+<h1 align="center">Dockerfile Boilerplates For All</h1>
 
 <p align="center">
   <img src="https://i.imgur.com/MvsT3qI.png" alt="Hello World! of Docker"/>
 </p>
 
-### Overview of Programming Languages
+<a href="https://travis-ci.com/gauthamp10/dockerfile-boilerplates"><img src="https://img.icons8.com/color/48/000000/travis-ci.png"/></a> [![Build Status](https://travis-ci.com/gauthamp10/dockerfile-boilerplates.svg?token=GyGbkGV9nLfsTamsNpS4&branch=master)](https://travis-ci.com/gauthamp10/dockerfile-boilerplates)
+
+Tested and ready to use docker boilerplates / templates for most common progamming languages. Like a *Hello World! of docker images.*
+
+
+
+---
+
+## __List Of Programming Languages__
 
 [![](https://img.shields.io/badge/ada-%20-blue)](https://img.shields.io/badge/ada-%20-blue) [![](https://img.shields.io/badge/bash-%20-blue)](https://img.shields.io/badge/bash-%20-blue) [![](https://img.shields.io/badge/C-%20-blue)](https://img.shields.io/badge/C-%20-blue) [![](https://img.shields.io/badge/CommonLisp-%20-blue)](https://img.shields.io/badge/CommonLisp-%20-blue) [![](https://img.shields.io/badge/cpp-%20-blue)](https://img.shields.io/badge/cpp-%20-blue) [![](https://img.shields.io/badge/dart-%20-blue)](https://img.shields.io/badge/dart-%20-blue) [![](https://img.shields.io/badge/elixir-%20-blue)](https://img.shields.io/badge/elixir-%20-blue) [![](https://img.shields.io/badge/erlang-%20-blue)](https://img.shields.io/badge/erlang-%20-blue) [![](https://img.shields.io/badge/fortran-%20-blue)](https://img.shields.io/badge/fortran-%20-blue) [![](https://img.shields.io/badge/go-%20-blue)](https://img.shields.io/badge/go-%20-blue) [![](https://img.shields.io/badge/haskell-%20-blue)](https://img.shields.io/badge/haskell-%20-blue) [![](https://img.shields.io/badge/icon-%20-blue)](https://img.shields.io/badge/icon-%20-blue) [![](https://img.shields.io/badge/java-%20-blue)](https://img.shields.io/badge/java-%20-blue) [![](https://img.shields.io/badge/javascript-%20-blue)](https://img.shields.io/badge/javascript-%20-blue) [![](https://img.shields.io/badge/julia-%20-blue)](https://img.shields.io/badge/julia-%20-blue) [![](https://img.shields.io/badge/kotlin-%20-blue)](https://img.shields.io/badge/kotlin-%20-blue) [![](https://img.shields.io/badge/lisp-%20-blue)](https://img.shields.io/badge/lisp-%20-blue) [![](https://img.shields.io/badge/lua-%20-blue)](https://img.shields.io/badge/lua-%20-blue) [![](https://img.shields.io/badge/node-%20-blue)](https://img.shields.io/badge/node-%20-blue) [![](https://img.shields.io/badge/objectiveC-%20-blue)](https://img.shields.io/badge/objectiveC-%20-blue) [![](https://img.shields.io/badge/perl-%20-blue)](https://img.shields.io/badge/perl-%20-blue) [![](https://img.shields.io/badge/php-%20-blue)](https://img.shields.io/badge/php-%20-blue) [![](https://img.shields.io/badge/python-%20-blue)](https://img.shields.io/badge/python-%20-blue) [![](https://img.shields.io/badge/R-%20-blue)](https://img.shields.io/badge/R-%20-blue) [![](https://img.shields.io/badge/rust-%20-blue)](https://img.shields.io/badge/rust-%20-blue) [![](https://img.shields.io/badge/scala-%20-blue)](https://img.shields.io/badge/scala-%20-blue) [![](https://img.shields.io/badge/swift-%20-blue)](https://img.shields.io/badge/swift-%20-blue) 
 
-### A Quick Word on Docker
+## __Docker__
 
 Docker is service which provides OS-level virtualization with such ease that no virtual machines can offer. It also packs software dependencies within itself and runs independently on various platforms.
 
 To know more: [docker.com](https://www.docker.com/)
 
 
-### __INSTRUCTIONS__
+## __Instructions__
 
 __Where do I start?__
 
@@ -67,7 +71,7 @@ Example:
 
 __How can I upload my image to docker hub ?__
 
-Create an account on dockerhub and
+Create an account on [dockerhub](https://hub.docker.com/) and then
 
 ```
 
@@ -96,9 +100,9 @@ Play around with your custom build by
 
 ```
 
+## __Overview Of Dockerfile__
 
-
-| Image Name       |    PL Version    |     Base Image    |                                                                                                        Image Size |
+| Image Name       |    Language Version    |     Base Image    |                                                                                                        Image Size |
 | :--------------- | :--------------: | :---------------: | ----------------------------------------------------------------------------------------------------------------: |
 | gauthamp10/ada        |     10.1.0-1     |   ubuntu:latest   |             [![](https://img.shields.io/badge/size-492MB-orange)](https://img.shields.io/badge/size-492MB-orange) |
 | gauthamp10/bash       |      4.4.20      |   alpine:latest   | [![](https://img.shields.io/badge/size-5.61MB-brightgreen)](https://img.shields.io/badge/size-5.61MB-brightgreen) |
@@ -131,15 +135,15 @@ Play around with your custom build by
 
 
 
-### Note: 
+## __Note:__ 
 
 This repo is tested with automated builds on commit with TRAVIS-CI. Some image meta data is being pulled using Microbadger.
 
-### How can I contribute ?
+## __How can I contribute__ ?
 
 Contributions are always welcomed. Create a boilerplate / template for any other porgramming langauges which not available in the list by opening a pull request.
 
-### Author
+## __Author__
 
  **Gautham Prakash**
  
@@ -149,7 +153,7 @@ Contributions are always welcomed. Create a boilerplate / template for any other
 
   Blog: [gauthamp10/blog](https://gauthamp10.github.io/blog)
 
-### License  
+## __License__  
 
 lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
 lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
