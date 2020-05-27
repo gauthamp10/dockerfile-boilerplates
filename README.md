@@ -9,8 +9,9 @@
 <<<<<<< HEAD
 Tested and ready to use docker boilerplates / templates for most common progamming languages. Like a _Hello World! of docker images._
 =======
-Tested and ready to use docker boilerplates / templates for most common progamming languages. Like a *Hello World! of docker images.*
->>>>>>> fd0cc5b39c06d163f52e482c657e9e70d90042bd
+Tested and ready to use docker boilerplates / templates for most common progamming languages. Like a _Hello World! of docker images._
+
+> > > > > > > fd0cc5b39c06d163f52e482c657e9e70d90042bd
 
 ---
 
@@ -161,4 +162,5 @@ lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ip
 lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
 =======
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
->>>>>>> fd0cc5b39c06d163f52e482c657e9e70d90042bd
+
+> > > > > > > fd0cc5b39c06d163f52e482c657e9e70d90042bd
