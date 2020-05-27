@@ -33,6 +33,8 @@ __#1: Pull the image from dockerhub and run__
 
   - docker pull gauthamp10/langauge-name
   - docker run --rm gauthamp10/langauge-name
+  For web app
+  - docker run -p 5000:5000 --rm -v /path/to/volume/:/app language-name
 
   Example:
 
