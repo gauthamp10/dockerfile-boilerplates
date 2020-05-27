@@ -32,7 +32,7 @@ jobs:
         - cd c
       script:
         - docker build -t c-build --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` --build-arg VCS_REF=`git rev-parse --short HEAD` .
-        - docker run --rm c-buid
+        - docker run --rm c-build
       after_script:
         - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
         - docker tag c-build $DOCKER_USERNAME/c-build:$TRAVIS_BUILD_NUMBER
