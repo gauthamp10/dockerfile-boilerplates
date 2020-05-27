@@ -6,7 +6,11 @@
 
 <a href="https://travis-ci.com/gauthamp10/dockerfile-boilerplates"><img src="https://img.icons8.com/color/48/000000/travis-ci.png"/></a> [![Build Status](https://travis-ci.com/gauthamp10/dockerfile-boilerplates.svg?token=GyGbkGV9nLfsTamsNpS4&branch=master)](https://travis-ci.com/gauthamp10/dockerfile-boilerplates)
 
+<<<<<<< HEAD
 Tested and ready to use docker boilerplates / templates for most common progamming languages. Like a _Hello World! of docker images._
+=======
+Tested and ready to use docker boilerplates / templates for most common progamming languages. Like a *Hello World! of docker images.*
+>>>>>>> fd0cc5b39c06d163f52e482c657e9e70d90042bd
 
 ---
 
@@ -151,6 +155,10 @@ Blog: [gauthamp10/blog](https://gauthamp10.github.io/blog)
 
 ## **License**
 
+<<<<<<< HEAD
 lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
 lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
 lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+=======
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+>>>>>>> fd0cc5b39c06d163f52e482c657e9e70d90042bd
