@@ -28,7 +28,7 @@ The source code of the specific programming language should be kept as simple as
 
 The docker file must be prepared in such a fashion that it doesn't use any unofficial docker images. Try to stick with alpine or ubuntu as the base image as often as possible.
 
-Please note that the repository files as automatically tested upon commit by Travis-ci and docker images are uploaded to [AUTHOR's](https://github.com/gauthamp10) [docker repository](https://hub.docker.com/repository/docker/gauthamp10/). So make sure that your code pass some basic unit tests and after the execution, it should reach an exit 0. In most situations , it will exit 0 but in case of a web based program, you have to write a test case to do so. 
+Please note that the repository files as automatically tested upon commit by Travis-ci and docker images are uploaded to [AUTHOR's](https://github.com/gauthamp10) [docker repository](https://hub.docker.com/u/gauthamp10). So make sure that your code pass some basic unit tests and after the execution, it should reach an exit 0. In most situations , it will exit 0 but in case of a web based program, you have to write a test case to do so. 
 
 Sample unit test in [python](https://github.com/gauthamp10/dockerfile-boilerplates/blob/master/python/web/app/app_test.py) and it's [Dockerfile](https://github.com/gauthamp10/dockerfile-boilerplates/blob/master/python/web/Dockerfile).
 
