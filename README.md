@@ -6,9 +6,11 @@
 
 <a href="https://travis-ci.com/gauthamp10/dockerfile-boilerplates"><img src="https://img.icons8.com/color/48/000000/travis-ci.png"/></a> [![Build Status](https://travis-ci.com/gauthamp10/dockerfile-boilerplates.svg?token=GyGbkGV9nLfsTamsNpS4&branch=master)](https://travis-ci.com/gauthamp10/dockerfile-boilerplates) ![GitHub repo size](https://img.shields.io/github/repo-size/gauthamp10/dockerfile-boilerplates) ![visitors](https://visitor-badge.glitch.me/badge?page_id=gauthamp10.dockerfile-boilerplates)
 
-Tested and ready to use docker boilerplates / templates for most common progamming languages. Like a *Hello World!* but for  docker images.
+Docker boilerplates / templates for most common progamming languages. Like a *Hello World!* but for  docker images.
 
 ---
+
+Note: Not production quality yet
 
 ## __List Of Programming Languages__
 
