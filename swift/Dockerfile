@@ -1,11 +1,7 @@
 FROM ubuntu:latest
+
 ARG VCS_REF
 ARG BUILD_DATE
-
-LABEL maintainer="Gautham Prakash <github.com/gauthamp10>"
-LABEL org.label-schema.build-date=$BUILD_DATE
-LABEL org.label-schema.vcs-url="https://github.com/gauthamp10/dockerfile-boilerplates"
-LABEL org.label-schema.vcs-ref=$VCS_REF
 
 RUN apt-get update && \
     apt-get install clang libicu-dev -y && \
@@ -16,6 +12,11 @@ RUN apt-get update && \
     ln -s ~/swift/swift-5.2.3-RELEASE-ubuntu18.04/usr/bin/swift /usr/local/bin/swift && \
     rm -rf swift-5.2*.deb && \
     apt-get clean && apt-get autoremove;
+
+LABEL maintainer="Gautham Prakash <github.com/gauthamp10>"
+LABEL org.label-schema.build-date=$BUILD_DATE
+LABEL org.label-schema.vcs-url="https://github.com/gauthamp10/dockerfile-boilerplates"
+LABEL org.label-schema.vcs-ref=$VCS_REF
 
 RUN mkdir src
 COPY src/main.swift /src

@@ -1,11 +1,7 @@
 FROM ubuntu
+
 ARG VCS_REF
 ARG BUILD_DATE
-
-LABEL maintainer="Gautham Prakash <github.com/gauthamp10>"
-LABEL org.label-schema.build-date=$BUILD_DATE
-LABEL org.label-schema.vcs-url="https://github.com/gauthamp10/dockerfile-boilerplates"
-LABEL org.label-schema.vcs-ref=$VCS_REF
 
 RUN apt-get update && \
     apt-get install -y curl && \
@@ -26,6 +22,11 @@ RUN apt-get update && \
     
 RUN export PATH="$PATH:/usr/lib/dart/bin" && \
     echo 'export PATH="$PATH:/usr/lib/dart/bin"' >> ~/.profile
+
+LABEL maintainer="Gautham Prakash <github.com/gauthamp10>"
+LABEL org.label-schema.build-date=$BUILD_DATE
+LABEL org.label-schema.vcs-url="https://github.com/gauthamp10/dockerfile-boilerplates"
+LABEL org.label-schema.vcs-ref=$VCS_REF
 
 COPY app/app.dart /app
 WORKDIR /app

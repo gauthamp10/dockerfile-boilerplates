@@ -1,4 +1,5 @@
 FROM elixir:1.10.3-alpine
+
 ARG VCS_REF
 ARG BUILD_DATE
 

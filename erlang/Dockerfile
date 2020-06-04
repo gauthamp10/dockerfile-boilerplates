@@ -1,4 +1,5 @@
 FROM erlang:23.0.1-alpine
+
 ARG VCS_REF
 ARG BUILD_DATE
 
