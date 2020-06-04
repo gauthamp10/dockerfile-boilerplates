@@ -33,8 +33,8 @@ __#1: Pull the image from dockerhub and run__
 
 ```
 
-  - docker pull gauthamp10/langauge-name
-  - docker run --rm gauthamp10/langauge-name
+  - docker pull gauthamp10/language-name
+  - docker run --rm gauthamp10/language-name
   For web app
   - docker run -p 5000:5000 --rm -v /path/to/volume/:/app language-name
 
@@ -61,7 +61,7 @@ At first edit the Dockerfile as per your liking
 
 ```
 
-  - docker build -t langauge-name .
+  - docker build -t language-name .
   - docker run --rm language-name
 
 Example:
@@ -78,8 +78,8 @@ Create an account on [dockerhub](https://hub.docker.com/) and then
 ```
 
   - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-  - docker tag language-name $DOCKER_USERNAME/langauge-name:$BUILD_VERSION
-  - docker push $DOCKER_USERNAME/langauge-name:$BUILD_VERSION
+  - docker tag language-name $DOCKER_USERNAME/language-name:$BUILD_VERSION
+  - docker push $DOCKER_USERNAME/language-name:$BUILD_VERSION
 
   Example:
 
@@ -94,7 +94,7 @@ Play around with your custom build by
 
 ```
 
-  - docker pull $DOCKER_USERNAME/langauge-name:latest
+  - docker pull $DOCKER_USERNAME/language-name:latest
 
   Example:
 
@@ -143,7 +143,7 @@ This repo is tested with automated builds on commit with TRAVIS-CI. Some image m
 
 ## __How can I contribute?__ 
 
-Contributions are always welcomed. Create a boilerplate / template for any other porgramming langauges which is not available in the repo by opening a pull request.For more information checkout the [CONTRIBUTING.md](CONTRIBUTING.md) file.
+Contributions are always welcomed. Create a boilerplate / template for any other porgramming languages which is not available in the repo by opening a pull request.For more information checkout the [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
 ## __Author__
 
