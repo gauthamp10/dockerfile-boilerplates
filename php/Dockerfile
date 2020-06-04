@@ -9,5 +9,3 @@ LABEL org.label-schema.vcs-ref=$VCS_REF
 
 COPY app/ /var/www/html
 EXPOSE 80
-CMD (! pidof php) || sudo kill -9 $(pidof php)
-
