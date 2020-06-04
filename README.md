@@ -143,7 +143,7 @@ This repo is tested with automated builds on commit with TRAVIS-CI. Some image m
 
 ## __How can I contribute?__ 
 
-Contributions are always welcomed. Create a boilerplate / template for any other porgramming languages which is not available in the repo by opening a pull request.For more information checkout the [CONTRIBUTING.md](CONTRIBUTING.md) file.
+Contributions are always welcomed. Create a boilerplate / template for any other programming languages which is not available in the repo by opening a pull request.For more information checkout the [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
 ## __Author__
 
