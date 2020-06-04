@@ -1,4 +1,4 @@
-FROM python:alpine3.11
+FROM python:3.6-slim
 ARG VCS_REF
 ARG BUILD_DATE
 
