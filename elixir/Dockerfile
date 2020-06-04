@@ -8,7 +8,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE
 LABEL org.label-schema.vcs-url="https://github.com/gauthamp10/dockerfile-boilerplates"
 LABEL org.label-schema.vcs-ref=$VCS_REF
 
-RUN groupadd -r dockeruser && useradd -r -g dockeruser dockeruser
+RUN addgroup -S dockergroup && adduser -S dockeruser -G dockergroup
 RUN  mkdir /src;
 
 USER dockeruser
