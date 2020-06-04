@@ -153,6 +153,7 @@ Contributions are always welcomed. Create a boilerplate / template for any other
     <td align="center"><a href="https://github.com/joshuawalcher"><img src="https://avatars3.githubusercontent.com/u/2533702?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Joshua Walcher</b></sub></a><br /><a href="https://github.com/gauthamp10/dockerfile-boilerplates/pull/3/commits" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/RHabereder"><img src="https://avatars1.githubusercontent.com/u/9299404?s=460&u=c5d0dab2eb2fc22665db0311d193fcaff3fdd1f6&v=4" width="100px;" alt=""/><br /><sub><b>Raphael Habereder</b></sub></a><br /><a href="https://github.com/gauthamp10/dockerfile-boilerplates/pull/5/commits" title="Code">✍️</a></td>
     <td align="center"><a href="https://github.com/NicolasCARPi"><img src="https://avatars2.githubusercontent.com/u/3043706?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Nicolas CARPi</b></sub></a><br /><a href="https://github.com/gauthamp10/dockerfile-boilerplates/commit/acd312c8dea5a50f06aa2cb9d73a44023853dbac" title="Code">✍️</a></td>
+    <td align="center"><a href="https://github.com/AlenJoseph"><img src="https://avatars3.githubusercontent.com/u/15855278?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Alen Joseph</b></sub></a><br /><a href="https://github.com/gauthamp10/dockerfile-boilerplates/commit/005b4e45da970972f2bcb3e3e1c7a195f46edefc" title="Code">✍️</a></td>
 
     </tr>
     </table>
