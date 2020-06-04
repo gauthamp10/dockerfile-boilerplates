@@ -2,12 +2,16 @@ FROM alpine:latest
 ARG VCS_REF
 ARG BUILD_DATE
 
+RUN addgroup -S dockergroup && adduser -S dockeruser -G dockergroup
+RUN  mkdir /script
+
 LABEL maintainer="Gautham Prakash <github.com/gauthamp10>"
 LABEL org.label-schema.build-date=$BUILD_DATE
 LABEL org.label-schema.vcs-url="https://github.com/gauthamp10/dockerfile-boilerplates"
 LABEL org.label-schema.vcs-ref=$VCS_REF
 
-RUN  mkdir /script
+USER dockeruser
+
 COPY script/main.sh /script
 WORKDIR /script
 CMD ["sh","./main.sh"]

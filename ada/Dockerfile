@@ -3,6 +3,7 @@ FROM ubuntu:latest
 ARG VCS_REF
 ARG BUILD_DATE
 
+RUN groupadd -r dockeruser && useradd -r -g dockeruser dockeruser
 RUN  apt-get update && apt-get install -y gcc gnat && \  
      mkdir /src
 
@@ -11,7 +12,9 @@ LABEL org.label-schema.build-date=$BUILD_DATE
 LABEL org.label-schema.vcs-url="https://github.com/gauthamp10/dockerfile-boilerplates"
 LABEL org.label-schema.vcs-ref=$VCS_REF
 
+USER dockeruser
 COPY src/main.ads /src
 WORKDIR /src
+USER root
 RUN gnatmake -o main main.ads
 CMD ["./main"]

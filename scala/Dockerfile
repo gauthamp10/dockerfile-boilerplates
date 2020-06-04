@@ -29,7 +29,7 @@ RUN apt-get install wget && \
     apt-get clean && \
     apt-get autoremove && \
     mkdir app;
-    
+
 LABEL maintainer="Gautham Prakash <github.com/gauthamp10>"
 LABEL org.label-schema.build-date=$BUILD_DATE
 LABEL org.label-schema.vcs-url="https://github.com/gauthamp10/dockerfile-boilerplates"
