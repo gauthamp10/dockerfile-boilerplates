@@ -151,6 +151,9 @@ Contributions are always welcomed. Create a boilerplate / template for any other
   <tr>
   <td align="center"><a href="https://gauthamp10.github.io/"><img src="https://avatars1.githubusercontent.com/u/31800012?s=460&u=5a57d59caba193f2ffecce05fbf070084885966e&v=4" width="100px;" alt=""/><br /><sub><b>Gautham Prakash</b></sub></a><br /><a href="https://github.com/gauthamp10/dockerfile-boilerplates" title="Documentation">✍️</a></td>
     <td align="center"><a href=""><img src="https://avatars3.githubusercontent.com/u/2533702?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Joshua Walcher</b></sub></a><br /><a href="https://github.com/gauthamp10/dockerfile-boilerplates" title="Documentation">📖</a></td>
+    </tr>
+    </table>
+
 
 ## __Author__
 
