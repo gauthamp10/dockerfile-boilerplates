@@ -2,6 +2,10 @@ FROM alpine:latest
 ARG VCS_REF
 ARG BUILD_DATE
 
+# Setting resource quota
+ARG MIN_MEM=2G
+ARG MAX_MEM=2G
+
 RUN apk add --update bash && \
     apk fetch openjdk8 && \
     apk add --no-cache openjdk8;

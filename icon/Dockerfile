@@ -3,6 +3,10 @@ FROM ubuntu:latest
 ARG VCS_REF
 ARG BUILD_DATE
 
+# Setting resource quota
+ARG MIN_MEM=2G
+ARG MAX_MEM=2G
+
 RUN  apt-get update && apt-get install -y wget && \
      apt-get install -y libx11-dev && \
      wget 'https://www2.cs.arizona.edu/icon/ftp/binaries/unix/linux-x64-v951.tgz' && \

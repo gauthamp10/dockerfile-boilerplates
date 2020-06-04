@@ -3,6 +3,10 @@ FROM alpine:latest
 ARG VCS_REF
 ARG BUILD_DATE
 
+# Setting resource quota
+ARG MIN_MEM=2G
+ARG MAX_MEM=2G
+
 RUN addgroup -S dockergroup && adduser -S dockeruser -G dockergroup
 RUN  apk add --no-cache build-base &&  mkdir /src
 

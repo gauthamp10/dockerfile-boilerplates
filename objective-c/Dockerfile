@@ -1,7 +1,12 @@
 FROM ubuntu:latest
+
 ARG DEBIAN_FRONTEND=noninteractive
 ARG VCS_REF
 ARG BUILD_DATE
+
+# Setting resource quota
+ARG MIN_MEM=2G
+ARG MAX_MEM=2G
 
 LABEL maintainer="Gautham Prakash <github.com/gauthamp10>"
 LABEL org.label-schema.build-date=$BUILD_DATE

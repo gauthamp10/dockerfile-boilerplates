@@ -2,6 +2,10 @@ FROM ubuntu:latest
 ARG VCS_REF
 ARG BUILD_DATE
 
+# Setting resource quota
+ARG MIN_MEM=2G
+ARG MAX_MEM=2G
+
 RUN  apt-get update &&  \
      apt-get install -y wget && \ 
      wget 'https://julialang-s3.julialang.org/bin/linux/x64/1.4/julia-1.4.1-linux-x86_64.tar.gz' && \   

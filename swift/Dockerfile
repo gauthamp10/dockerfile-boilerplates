@@ -3,6 +3,10 @@ FROM ubuntu:latest
 ARG VCS_REF
 ARG BUILD_DATE
 
+# Setting resource quota
+ARG MIN_MEM=2G
+ARG MAX_MEM=2G
+
 RUN apt-get update && \
     apt-get install clang libicu-dev -y && \
     apt-get install -y wget && \

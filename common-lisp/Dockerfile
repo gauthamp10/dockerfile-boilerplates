@@ -2,6 +2,10 @@ FROM ubuntu:latest
 ARG VCS_REF
 ARG BUILD_DATE
 
+# Setting resource quota
+ARG MIN_MEM=2G
+ARG MAX_MEM=2G
+
 RUN groupadd -r dockeruser && useradd -r -g dockeruser dockeruser
 RUN  apt-get update && \ 
      apt-get install -y clisp && \

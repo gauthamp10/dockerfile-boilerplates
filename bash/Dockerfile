@@ -2,6 +2,10 @@ FROM alpine:latest
 ARG VCS_REF
 ARG BUILD_DATE
 
+# Setting resource quota
+ARG MIN_MEM=1G
+ARG MAX_MEM=1G
+
 RUN addgroup -S dockergroup && adduser -S dockeruser -G dockergroup
 RUN  mkdir /script
 
