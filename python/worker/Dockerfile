@@ -1,4 +1,5 @@
 FROM python:3.6-slim
+
 ARG VCS_REF
 ARG BUILD_DATE
 
@@ -10,4 +11,4 @@ LABEL org.label-schema.vcs-ref=$VCS_REF
 COPY ./src /src
 WORKDIR /src
 RUN pip install -r requirements.txt
-CMD python ./hello_python.py
+CMD python hello_python.py
