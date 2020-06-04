@@ -1,8 +1,7 @@
 FROM alpine:latest
-
+#Build args
 ARG VCS_REF
 ARG BUILD_DATE
-
 # Sensible Defaults for Memory Consumption
 ARG MIN_MEM=2G
 ARG MAX_MEM=2G
@@ -17,7 +16,7 @@ RUN apk update && \
 
 ENV JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk
 ENV PATH="$JAVA_HOME/bin:${PATH}"
-
+#Adding Labels of build
 LABEL maintainer="Gautham Prakash <github.com/gauthamp10>"
 LABEL org.label-schema.build-date=$BUILD_DATE
 LABEL org.label-schema.vcs-url="https://github.com/gauthamp10/dockerfile-boilerplates"
@@ -32,6 +31,7 @@ RUN chown nobody. /app
 # Copy as Nobody
 COPY --chown=nobody app/app.java /app
 USER nobody
-
+#Compiling source
 RUN javac app.java
+#Execution
 CMD ["java", "app"]
