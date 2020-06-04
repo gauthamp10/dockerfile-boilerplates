@@ -149,9 +149,9 @@ Contributions are always welcomed. Create a boilerplate / template for any other
 
 <table>
   <tr>
-  <td align="center"><a href="https://gauthamp10.github.io/"><img src="https://avatars1.githubusercontent.com/u/31800012?s=460&u=5a57d59caba193f2ffecce05fbf070084885966e&v=4" width="100px;" alt=""/><br /><sub><b>Gautham Prakash</b></sub></a><br /><a href="https://github.com/gauthamp10/dockerfile-boilerplates" title="Documentation">✍️</a></td>
-    <td align="center"><a href="https://github.com/joshuawalcher"><img src="https://avatars3.githubusercontent.com/u/2533702?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Joshua Walcher</b></sub></a><br /><a href="https://github.com/gauthamp10/dockerfile-boilerplates" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/RHabereder"><img src="https://avatars1.githubusercontent.com/u/9299404?s=460&u=c5d0dab2eb2fc22665db0311d193fcaff3fdd1f6&v=4" width="100px;" alt=""/><br /><sub><b>Raphael Habereder</b></sub></a><br /><a href="https://github.com/gauthamp10/dockerfile-boilerplates" title="Code">✍️</a></td>
+  <td align="center"><a href="https://gauthamp10.github.io/"><img src="https://avatars1.githubusercontent.com/u/31800012?s=460&u=5a57d59caba193f2ffecce05fbf070084885966e&v=4" width="100px;" alt=""/><br /><sub><b>Gautham Prakash</b></sub></a><br /><a href="https://github.com/gauthamp10/dockerfile-boilerplates" title="Author">✍️</a></td>
+    <td align="center"><a href="https://github.com/joshuawalcher"><img src="https://avatars3.githubusercontent.com/u/2533702?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Joshua Walcher</b></sub></a><br /><a href="https://github.com/gauthamp10/dockerfile-boilerplates/pull/3/commits" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/RHabereder"><img src="https://avatars1.githubusercontent.com/u/9299404?s=460&u=c5d0dab2eb2fc22665db0311d193fcaff3fdd1f6&v=4" width="100px;" alt=""/><br /><sub><b>Raphael Habereder</b></sub></a><br /><a href="https://github.com/gauthamp10/dockerfile-boilerplates/pull/5/commits" title="Code">✍️</a></td>
     </tr>
     </table>
 
