@@ -13,7 +13,7 @@ LABEL maintainer="Gautham Prakash <github.com/gauthamp10>"
 LABEL org.label-schema.build-date=$BUILD_DATE
 LABEL org.label-schema.vcs-url="https://github.com/gauthamp10/dockerfile-boilerplates"
 LABEL org.label-schema.vcs-ref=$VCS_REF
-# Here we install GNU libc (aka glibc) and set C.UTF-8 locale as default.
+
 RUN apk --no-cache add ca-certificates wget\
     && wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub\
     && wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.31-r0/glibc-2.31-r0.apk\
