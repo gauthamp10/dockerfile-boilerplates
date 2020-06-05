@@ -37,8 +37,8 @@ RUN apk --no-cache add ca-certificates wget\
     && rm "/root/.wget-hsts" 
 
 
-RUN addgroup -g 1993 -S dockeruser \
-    && adduser -u 1993 -S dockeruser -G dockeruser \
+RUN addgroup -S dockeruser \ 
+    && adduser -S dockeruser -G dockeruser \
     && mkdir /src/ \
     && chown dockeruser:dockeruser /src/
 
